@@ -580,16 +580,25 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Modificar Lanzamiento"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ModificarLMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="ModificarT">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Modificar Tipo"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ModificarTMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="ModificarG">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Modificar Genero"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ModificarGMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="SalidaMenuM">
               <Properties>
@@ -916,6 +925,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Guardar"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="GuardarMGeneroMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -992,6 +1004,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Guardar"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="GuardarMTipoMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

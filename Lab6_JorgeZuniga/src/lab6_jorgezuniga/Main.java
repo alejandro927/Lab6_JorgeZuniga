@@ -475,10 +475,25 @@ public class Main extends javax.swing.JFrame {
         });
 
         ModificarL.setText("Modificar Lanzamiento");
+        ModificarL.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ModificarLMouseClicked(evt);
+            }
+        });
 
         ModificarT.setText("Modificar Tipo");
+        ModificarT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ModificarTMouseClicked(evt);
+            }
+        });
 
         ModificarG.setText("Modificar Genero");
+        ModificarG.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ModificarGMouseClicked(evt);
+            }
+        });
 
         SalidaMenuM.setText("Salida");
         SalidaMenuM.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -726,6 +741,11 @@ public class Main extends javax.swing.JFrame {
         jLabel12.setText("Elija el nuevo Genero");
 
         GuardarMGenero.setText("Guardar");
+        GuardarMGenero.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GuardarMGeneroMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout ModificarGeneroLayout = new javax.swing.GroupLayout(ModificarGenero.getContentPane());
         ModificarGenero.getContentPane().setLayout(ModificarGeneroLayout);
@@ -759,6 +779,11 @@ public class Main extends javax.swing.JFrame {
         jLabel13.setText("Elija el nuevo Tipo");
 
         GuardarMTipo.setText("Guardar");
+        GuardarMTipo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GuardarMTipoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -1004,16 +1029,24 @@ public class Main extends javax.swing.JFrame {
 
     private void ModificarNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarNMouseClicked
         // TODO add your handling code here:
+        if (Integer.parseInt(posicion.getText())<0) {
+            
+        }else{
         ModificarNombre.pack();
         ModificarNombre.setVisible(true);
         ModificarProgramas.setVisible(false);
+        }
     }//GEN-LAST:event_ModificarNMouseClicked
 
     private void ModificarPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarPMouseClicked
         // TODO add your handling code here:
+        if (Integer.parseInt(posicion.getText())<0) {
+            
+        }else{
         ModificarPuntuacion.pack();
         ModificarPuntuacion.setVisible(true);
         ModificarProgramas.setVisible(false);
+        }
     }//GEN-LAST:event_ModificarPMouseClicked
 
     private void GuardarMPuntajeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarMPuntajeMouseClicked
@@ -1027,7 +1060,7 @@ public class Main extends javax.swing.JFrame {
             ap.getListaProgramas().get(p).setPuntuacion(n);
             ap.escribirArchivo();
             
-            nombreM.setText("");
+            PuntuacionM.setText("");
             ModificarProgramas.pack();
             ModificarProgramas.setVisible(true);
             ModificarPuntuacion.setVisible(false);
@@ -1047,7 +1080,7 @@ public class Main extends javax.swing.JFrame {
             ap.getListaProgramas().get(p).setAnoLanzamiento(n);
             ap.escribirArchivo();
             
-            nombreM.setText("");
+            AñoLanzamientoM.setText("");
             ModificarProgramas.pack();
             ModificarProgramas.setVisible(true);
             ModificarPuntuacion.setVisible(false);
@@ -1055,6 +1088,77 @@ public class Main extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_GuardarMLanzamientoMouseClicked
+
+    private void GuardarMGeneroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarMGeneroMouseClicked
+        // TODO add your handling code here:
+        try {
+            AdministrarProgramas ap = new AdministrarProgramas("./Programas.txt");
+            int p;
+            String n;
+            p = Integer.parseInt(posicion.getText());
+            n = GeneroM.getSelectedItem().toString();
+            ap.cargarArchivo();
+            ap.getListaProgramas().get(p).setGenero(n);
+            ap.escribirArchivo();
+            
+            GeneroM.setSelectedIndex(0);
+            ModificarProgramas.pack();
+            ModificarProgramas.setVisible(true);
+            ModificarGenero.setVisible(false);
+            
+        } catch (IOException ex) {
+        }
+    }//GEN-LAST:event_GuardarMGeneroMouseClicked
+
+    private void GuardarMTipoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarMTipoMouseClicked
+        // TODO add your handling code here:
+        try {
+            AdministrarProgramas ap = new AdministrarProgramas("./Programas.txt");
+            int p;
+            String n;
+            p = Integer.parseInt(posicion.getText());
+            n = TipoM.getSelectedItem().toString();
+            ap.cargarArchivo();
+            ap.getListaProgramas().get(p).setTipo(n);
+            ap.escribirArchivo();
+            
+            TipoM.setSelectedIndex(0);
+            ModificarProgramas.pack();
+            ModificarProgramas.setVisible(true);
+            ModificarTipo.setVisible(false);
+        } catch (IOException ex) {
+        }
+    }//GEN-LAST:event_GuardarMTipoMouseClicked
+
+    private void ModificarLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarLMouseClicked
+        // TODO add your handling code here:
+        if (Integer.parseInt(posicion.getText())<0) {
+            
+        }else{
+        ModificarLanzamiento.pack();
+        ModificarLanzamiento.setVisible(true);
+        ModificarProgramas.setVisible(false);}
+    }//GEN-LAST:event_ModificarLMouseClicked
+
+    private void ModificarTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarTMouseClicked
+        // TODO add your handling code here:
+        if (Integer.parseInt(posicion.getText())<0) {
+        }else{
+        ModificarTipo.pack();
+        ModificarTipo.setVisible(true);
+        ModificarProgramas.setVisible(false);
+        }
+    }//GEN-LAST:event_ModificarTMouseClicked
+
+    private void ModificarGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarGMouseClicked
+        // TODO add your handling code here:
+        if (Integer.parseInt(posicion.getText())<0) {
+        }else{
+        ModificarGenero.pack();
+        ModificarGenero.setVisible(true);
+        ModificarProgramas.setVisible(false);
+        }
+    }//GEN-LAST:event_ModificarGMouseClicked
 
     /**
      * @param args the command line arguments
