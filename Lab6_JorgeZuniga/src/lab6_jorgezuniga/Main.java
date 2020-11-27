@@ -119,6 +119,13 @@ public class Main extends javax.swing.JFrame {
         textArea = new javax.swing.JTextArea();
         jLabel10 = new javax.swing.JLabel();
         posicion = new javax.swing.JFormattedTextField();
+        ModificarLista = new javax.swing.JDialog();
+        jPanel11 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel15 = new javax.swing.JLabel();
+        posicionListas = new javax.swing.JFormattedTextField();
+        Nombre = new javax.swing.JButton();
         ModificarNombre = new javax.swing.JDialog();
         jPanel7 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
@@ -143,6 +150,26 @@ public class Main extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         TipoM = new javax.swing.JComboBox<>();
         GuardarMTipo = new javax.swing.JButton();
+        ModificarNombreLista = new javax.swing.JDialog();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        NombreMLista = new javax.swing.JTextField();
+        Guardar_nombreLista = new javax.swing.JButton();
+        ListarProgramas = new javax.swing.JDialog();
+        jPanel14 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        SalidaListarP = new javax.swing.JButton();
+        ListarListas = new javax.swing.JDialog();
+        jPanel15 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        SalidaListarL = new javax.swing.JButton();
+        MenuListar = new javax.swing.JDialog();
+        jPanel13 = new javax.swing.JPanel();
+        ListarP = new javax.swing.JButton();
+        ListarL = new javax.swing.JButton();
+        SalidaMenuListar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         Agregar = new javax.swing.JButton();
         Modificar = new javax.swing.JButton();
@@ -417,6 +444,11 @@ public class Main extends javax.swing.JFrame {
         });
 
         ModificarListas.setText("Modificar Listas");
+        ModificarListas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ModificarListasMouseClicked(evt);
+            }
+        });
 
         SalidaMenuModificar.setText("Salir");
         SalidaMenuModificar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -578,6 +610,69 @@ public class Main extends javax.swing.JFrame {
         ModificarProgramasLayout.setVerticalGroup(
             ModificarProgramasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
+
+        jLabel15.setText("Posicion");
+
+        try {
+            posicionListas.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        Nombre.setText("Nombre");
+        Nombre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                NombreMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addComponent(jLabel15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(posicionListas, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(posicionListas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(101, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout ModificarListaLayout = new javax.swing.GroupLayout(ModificarLista.getContentPane());
+        ModificarLista.getContentPane().setLayout(ModificarListaLayout);
+        ModificarListaLayout.setHorizontalGroup(
+            ModificarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        ModificarListaLayout.setVerticalGroup(
+            ModificarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jLabel9.setText("Ingrese el nuevo nombre");
@@ -825,6 +920,193 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jLabel16.setText("Nuevo Nombre");
+
+        Guardar_nombreLista.setText("Guardar");
+        Guardar_nombreLista.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Guardar_nombreListaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(156, 156, 156)
+                        .addComponent(jLabel16))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(117, 117, 117)
+                        .addComponent(NombreMLista, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(Guardar_nombreLista)))
+                .addContainerGap(113, Short.MAX_VALUE))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(101, 101, 101)
+                .addComponent(jLabel16)
+                .addGap(28, 28, 28)
+                .addComponent(NombreMLista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(Guardar_nombreLista)
+                .addContainerGap(82, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout ModificarNombreListaLayout = new javax.swing.GroupLayout(ModificarNombreLista.getContentPane());
+        ModificarNombreLista.getContentPane().setLayout(ModificarNombreListaLayout);
+        ModificarNombreListaLayout.setHorizontalGroup(
+            ModificarNombreListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        ModificarNombreListaLayout.setVerticalGroup(
+            ModificarNombreListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane4.setViewportView(jTextArea2);
+
+        SalidaListarP.setText("Salida");
+        SalidaListarP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SalidaListarPMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane4)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(154, 154, 154)
+                .addComponent(SalidaListarP)
+                .addContainerGap(183, Short.MAX_VALUE))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(SalidaListarP)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout ListarProgramasLayout = new javax.swing.GroupLayout(ListarProgramas.getContentPane());
+        ListarProgramas.getContentPane().setLayout(ListarProgramasLayout);
+        ListarProgramasLayout.setHorizontalGroup(
+            ListarProgramasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        ListarProgramasLayout.setVerticalGroup(
+            ListarProgramasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jScrollPane5.setViewportView(jTextArea3);
+
+        SalidaListarL.setText("Salida");
+        SalidaListarL.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SalidaListarLMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane5)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(154, 154, 154)
+                .addComponent(SalidaListarL)
+                .addContainerGap(183, Short.MAX_VALUE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(SalidaListarL)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout ListarListasLayout = new javax.swing.GroupLayout(ListarListas.getContentPane());
+        ListarListas.getContentPane().setLayout(ListarListasLayout);
+        ListarListasLayout.setHorizontalGroup(
+            ListarListasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        ListarListasLayout.setVerticalGroup(
+            ListarListasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        ListarP.setText("Listar Programas");
+        ListarP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ListarPMouseClicked(evt);
+            }
+        });
+
+        ListarL.setText("Listar Listas");
+        ListarL.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ListarLMouseClicked(evt);
+            }
+        });
+
+        SalidaMenuListar.setText("Salida");
+        SalidaMenuListar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SalidaMenuListarMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(140, 140, 140)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(SalidaMenuListar)
+                    .addComponent(ListarL)
+                    .addComponent(ListarP))
+                .addContainerGap(144, Short.MAX_VALUE))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(ListarP)
+                .addGap(57, 57, 57)
+                .addComponent(ListarL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addComponent(SalidaMenuListar)
+                .addGap(35, 35, 35))
+        );
+
+        javax.swing.GroupLayout MenuListarLayout = new javax.swing.GroupLayout(MenuListar.getContentPane());
+        MenuListar.getContentPane().setLayout(MenuListarLayout);
+        MenuListarLayout.setHorizontalGroup(
+            MenuListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        MenuListarLayout.setVerticalGroup(
+            MenuListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -875,6 +1157,9 @@ public class Main extends javax.swing.JFrame {
 
     private void ListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarActionPerformed
         // TODO add your handling code here:
+        MenuListar.pack();
+        MenuListar.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_ListarActionPerformed
 
     private void AgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgregarMouseClicked
@@ -1160,6 +1445,67 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ModificarGMouseClicked
 
+    private void Guardar_nombreListaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Guardar_nombreListaMouseClicked
+        // TODO add your handling code here:
+        
+        ModificarLista.pack();
+        ModificarLista.setVisible(true);
+        ModificarNombreLista.setVisible(false);
+        
+    }//GEN-LAST:event_Guardar_nombreListaMouseClicked
+
+    private void NombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NombreMouseClicked
+        // TODO add your handling code here:
+        if (Integer.parseInt(posicionListas.getText())<0) {
+        }else{
+        ModificarNombreLista.pack();
+        ModificarNombreLista.setVisible(true);
+        ModificarLista.setVisible(false);
+        }
+    }//GEN-LAST:event_NombreMouseClicked
+
+    private void ModificarListasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarListasMouseClicked
+        // TODO add your handling code here:
+        ModificarLista.pack();
+        ModificarLista.setVisible(true);
+        MenuModificar.setVisible(false);
+    }//GEN-LAST:event_ModificarListasMouseClicked
+
+    private void ListarPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ListarPMouseClicked
+        // TODO add your handling code here:
+        ListarProgramas.pack();
+        ListarProgramas.setVisible(true);
+        MenuListar.setVisible(false);
+    }//GEN-LAST:event_ListarPMouseClicked
+
+    private void ListarLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ListarLMouseClicked
+        // TODO add your handling code here:
+        ListarListas.pack();
+        ListarListas.setVisible(true);
+        MenuListar.setVisible(false);
+    }//GEN-LAST:event_ListarLMouseClicked
+
+    private void SalidaListarPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalidaListarPMouseClicked
+        // TODO add your handling code here:
+        MenuListar.pack();
+        MenuListar.setVisible(true);
+        ListarProgramas.setVisible(false);
+    }//GEN-LAST:event_SalidaListarPMouseClicked
+
+    private void SalidaListarLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalidaListarLMouseClicked
+        // TODO add your handling code here:
+        MenuListar.pack();
+        MenuListar.setVisible(true);
+        ListarListas.setVisible(false);
+    }//GEN-LAST:event_SalidaListarLMouseClicked
+
+    private void SalidaMenuListarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalidaMenuListarMouseClicked
+        // TODO add your handling code here:
+        this.pack();
+        this.setVisible(true);
+        MenuListar.setVisible(false);
+    }//GEN-LAST:event_SalidaMenuListarMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1213,30 +1559,43 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton GuardarMPuntaje;
     private javax.swing.JButton GuardarMTipo;
     private javax.swing.JButton GuardarPrograma;
+    private javax.swing.JButton Guardar_nombreLista;
     private javax.swing.JButton Listar;
+    private javax.swing.JButton ListarL;
+    private javax.swing.JDialog ListarListas;
+    private javax.swing.JButton ListarP;
+    private javax.swing.JDialog ListarProgramas;
     private javax.swing.JDialog MenuAgregar;
+    private javax.swing.JDialog MenuListar;
     private javax.swing.JDialog MenuModificar;
     private javax.swing.JButton Modificar;
     private javax.swing.JButton ModificarG;
     private javax.swing.JDialog ModificarGenero;
     private javax.swing.JButton ModificarL;
     private javax.swing.JDialog ModificarLanzamiento;
+    private javax.swing.JDialog ModificarLista;
     private javax.swing.JButton ModificarListas;
     private javax.swing.JButton ModificarN;
     private javax.swing.JDialog ModificarNombre;
+    private javax.swing.JDialog ModificarNombreLista;
     private javax.swing.JButton ModificarP;
     private javax.swing.JButton ModificarPrograma;
     private javax.swing.JDialog ModificarProgramas;
     private javax.swing.JDialog ModificarPuntuacion;
     private javax.swing.JButton ModificarT;
     private javax.swing.JDialog ModificarTipo;
+    private javax.swing.JButton Nombre;
     private javax.swing.JTextField NombreALista;
     private javax.swing.JTextField NombreAPrograma;
+    private javax.swing.JTextField NombreMLista;
     private javax.swing.JFormattedTextField PuntuacionAPrograma;
     private javax.swing.JFormattedTextField PuntuacionM;
     private javax.swing.JButton SalidaAgregarLista;
     private javax.swing.JButton SalidaAgregarPrograma;
+    private javax.swing.JButton SalidaListarL;
+    private javax.swing.JButton SalidaListarP;
     private javax.swing.JButton SalidaMenuAgregar;
+    private javax.swing.JButton SalidaMenuListar;
     private javax.swing.JButton SalidaMenuM;
     private javax.swing.JButton SalidaMenuModificar;
     private javax.swing.JComboBox<String> TipoAPrograma;
@@ -1248,6 +1607,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1258,6 +1619,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1267,9 +1633,16 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextField nombreM;
     private javax.swing.JFormattedTextField posicion;
+    private javax.swing.JFormattedTextField posicionListas;
     private javax.swing.JList<String> ta_1;
     private javax.swing.JTextArea textArea;
     // End of variables declaration//GEN-END:variables
