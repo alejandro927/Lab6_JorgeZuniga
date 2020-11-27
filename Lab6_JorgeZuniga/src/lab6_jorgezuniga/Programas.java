@@ -5,23 +5,27 @@
  */
 package lab6_jorgezuniga;
 
-import java.util.Date;
+import java.awt.Component;
 
 /**
  *
  * @author Alejandro
  */
 public class Programas {
+
+    static void show(Component component, int x, int y) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     private String nombre;
     private int puntuacion;
-    private Date anoLanzamiento;
+    private int anoLanzamiento;
     private String Tipo;
     private String Genero;
 
     public Programas() {
     }
 
-    public Programas(String nombre, int puntuacion, Date anoLanzamiento, String Tipo, String Genero) {
+    public Programas(String nombre, int puntuacion, int anoLanzamiento, String Tipo, String Genero) {
         this.nombre = nombre;
         this.puntuacion = puntuacion;
         this.anoLanzamiento = anoLanzamiento;
@@ -45,11 +49,11 @@ public class Programas {
         this.puntuacion = puntuacion;
     }
 
-    public Date getAnoLanzamiento() {
+    public int getAnoLanzamiento() {
         return anoLanzamiento;
     }
 
-    public void setAnoLanzamiento(Date anoLanzamiento) {
+    public void setAnoLanzamiento(int anoLanzamiento) {
         this.anoLanzamiento = anoLanzamiento;
     }
 
