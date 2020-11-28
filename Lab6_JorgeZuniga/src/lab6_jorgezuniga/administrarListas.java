@@ -16,11 +16,11 @@ import java.util.Scanner;
  *
  * @author Alejandro
  */
-public class AdministrarProgramas {
-        private ArrayList<Programas> listaProgramas = new ArrayList();
+public class administrarListas {
+        private ArrayList<ListaDeClau> listasLista = new ArrayList();
     private File archivo = null;
 
-    public AdministrarProgramas(String path) {
+    public administrarListas(String path) {
         archivo = new File(path);
     }
 
@@ -33,22 +33,22 @@ public class AdministrarProgramas {
         this.archivo = archivo;
     }
 
-    public ArrayList<Programas> getListaProgramas() {
-        return listaProgramas;
+    public ArrayList<ListaDeClau> getListalista() {
+        return listasLista;
     }
 
-    public void setListaProgramas(ArrayList<Programas> listaPersonas) {
-        this.listaProgramas = listaPersonas;
+    public void setListaProgramas(ArrayList<ListaDeClau> listasLista) {
+        this.listasLista = listasLista;
     }
 
     @Override
     public String toString() {
-        return "ListaProgramas=" + listaProgramas;
+        return "ListaDeLista=" + listasLista;
     }
 
     //extra mutador
-    public void setPrograma(Programas p) {
-        this.listaProgramas.add(p);
+    public void setListaClau(ListaDeClau p) {
+        this.listasLista.add(p);
     }
 
     //metodos de administracion
@@ -58,12 +58,8 @@ public class AdministrarProgramas {
         try {
             fw = new FileWriter(archivo, false);
             bw = new BufferedWriter(fw);
-            for (Programas t : listaProgramas) {
+            for (ListaDeClau t : listasLista) {
                 bw.write(t.getNombre() + "/");
-                bw.write(t.getPuntuacion()+ "/");
-                bw.write(t.getAnoLanzamiento()+ "/");
-                bw.write(t.getTipo()+ "/");
-                bw.write(t.getGenero()+ "/");
             }
             bw.flush();
         } catch (Exception ex) {
@@ -74,13 +70,13 @@ public class AdministrarProgramas {
 
     public void cargarArchivo() {
         Scanner sc = null;
-        listaProgramas = new ArrayList();
+        listasLista = new ArrayList();
         if (archivo.exists()) {
             try {
                 sc = new Scanner(archivo);
                 sc.useDelimiter("/");
                 while (sc.hasNext()) {
-                    listaProgramas.add( new Programas( sc.next(),sc.nextInt(),sc.nextInt(),sc.next(),sc.next() ) );
+                    listasLista.add( new ListaDeClau(sc.next()) );
                 }
             } catch (Exception ex) {
             }
