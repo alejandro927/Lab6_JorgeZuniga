@@ -17,7 +17,8 @@ import java.util.Scanner;
  * @author Alejandro
  */
 public class administrarListas {
-        private ArrayList<ListaDeClau> listasLista = new ArrayList();
+
+    private ArrayList<ListaDeClau> listasLista = new ArrayList();
     private File archivo = null;
 
     public administrarListas(String path) {
@@ -27,7 +28,6 @@ public class administrarListas {
     public File getArchivo() {
         return archivo;
     }
-    
 
     public void setArchivo(File archivo) {
         this.archivo = archivo;
@@ -37,7 +37,7 @@ public class administrarListas {
         return listasLista;
     }
 
-    public void setListaProgramas(ArrayList<ListaDeClau> listasLista) {
+    public void setListaListas(ArrayList<ListaDeClau> listasLista) {
         this.listasLista = listasLista;
     }
 
@@ -76,7 +76,7 @@ public class administrarListas {
                 sc = new Scanner(archivo);
                 sc.useDelimiter("/");
                 while (sc.hasNext()) {
-                    listasLista.add( new ListaDeClau(sc.next()) );
+                    listasLista.add(new ListaDeClau(sc.next()));
                 }
             } catch (Exception ex) {
             }

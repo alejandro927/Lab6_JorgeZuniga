@@ -40,7 +40,7 @@ public class ListaDeClau {
 
     @Override
     public String toString() {
-        return "ListaDeClau{" + "nombre=" + nombre + ", listaclau=" + listaclau + '}';
+        return "nombre=" + nombre;
     }
     
 }

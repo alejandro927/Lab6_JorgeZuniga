@@ -100,8 +100,8 @@ public class Main extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         SalidaAgregarLista = new javax.swing.JButton();
         AgrgarAl_ta_1 = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        ta_1 = new javax.swing.JList<>();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        AreaTexto = new javax.swing.JTextArea();
         MenuModificar = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
         ModificarPrograma = new javax.swing.JButton();
@@ -121,11 +121,15 @@ public class Main extends javax.swing.JFrame {
         posicion = new javax.swing.JFormattedTextField();
         ModificarLista = new javax.swing.JDialog();
         jPanel11 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         jLabel15 = new javax.swing.JLabel();
         posicionListas = new javax.swing.JFormattedTextField();
-        Nombre = new javax.swing.JButton();
+        jLabel19 = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        AreaTexto1 = new javax.swing.JTextArea();
+        AgrgarAl_ta_2 = new javax.swing.JButton();
+        GuardarMLista = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        NombreListaM = new javax.swing.JTextField();
         ModificarNombre = new javax.swing.JDialog();
         jPanel7 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
@@ -189,8 +193,10 @@ public class Main extends javax.swing.JFrame {
         Eliminarlist = new javax.swing.JButton();
         posicionEliminarL = new javax.swing.JFormattedTextField();
         jLabel18 = new javax.swing.JLabel();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        textArea2 = new javax.swing.JTextArea();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        AreaTexto2 = new javax.swing.JTextArea();
+        jLabel21 = new javax.swing.JLabel();
+        AgrgarAl_ta_3 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         Agregar = new javax.swing.JButton();
         Modificar = new javax.swing.JButton();
@@ -363,6 +369,11 @@ public class Main extends javax.swing.JFrame {
         jLabel7.setText("Nombre");
 
         GuardarLista.setText("Guardar");
+        GuardarLista.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GuardarListaMouseClicked(evt);
+            }
+        });
 
         jLabel8.setText("Los programas son:");
 
@@ -380,13 +391,9 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        ta_1.setModel(new DefaultListModel());
-        ta_1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ta_1MouseClicked(evt);
-            }
-        });
-        jScrollPane3.setViewportView(ta_1);
+        AreaTexto.setColumns(20);
+        AreaTexto.setRows(5);
+        jScrollPane8.setViewportView(AreaTexto);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -399,25 +406,19 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
                             .addComponent(jLabel8))
+                        .addGap(45, 45, 45)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addComponent(NombreALista, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))
+                            .addComponent(NombreALista, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(GuardarLista, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(47, 47, 47)
-                                .addComponent(SalidaAgregarLista, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(65, 65, 65)
-                                .addComponent(AgrgarAl_ta_1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap())))
+                        .addComponent(GuardarLista, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(47, 47, 47)
+                        .addComponent(SalidaAgregarLista, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(AgrgarAl_ta_1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -432,11 +433,11 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)))
                 .addComponent(AgrgarAl_ta_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(69, 69, 69)
+                .addGap(39, 39, 39)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(GuardarLista, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
                     .addComponent(SalidaAgregarLista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -633,10 +634,6 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
-
         jLabel15.setText("Posicion");
 
         try {
@@ -645,44 +642,83 @@ public class Main extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
-        Nombre.setText("Nombre");
-        Nombre.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel19.setText("Las Listas son");
+
+        AreaTexto1.setColumns(20);
+        AreaTexto1.setRows(5);
+        jScrollPane9.setViewportView(AreaTexto1);
+
+        AgrgarAl_ta_2.setText("Agregar Lista de Programas");
+        AgrgarAl_ta_2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                NombreMouseClicked(evt);
+                AgrgarAl_ta_2MouseClicked(evt);
             }
         });
+
+        GuardarMLista.setText("Guardar");
+        GuardarMLista.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GuardarMListaMouseClicked(evt);
+            }
+        });
+
+        jLabel20.setText("Nombre");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(109, 109, 109)
+                .addComponent(jLabel15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addComponent(posicionListas, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(139, 139, 139))
+            .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(jLabel15)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(posicionListas, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39))
+                        .addGap(77, 77, 77)
+                        .addComponent(AgrgarAl_ta_2, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(151, 151, 151)
+                        .addComponent(GuardarMLista))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addComponent(jLabel20)
+                                .addGap(89, 89, 89)
+                                .addComponent(NombreListaM, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(NombreListaM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(30, 30, 30)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addGap(32, 32, 32)))
+                .addComponent(AgrgarAl_ta_2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
                     .addComponent(posicionListas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(GuardarMLista)
+                .addGap(25, 25, 25))
         );
 
         javax.swing.GroupLayout ModificarListaLayout = new javax.swing.GroupLayout(ModificarLista.getContentPane());
@@ -1264,6 +1300,11 @@ public class Main extends javax.swing.JFrame {
         });
 
         Eliminarlist.setText("Eliminar");
+        Eliminarlist.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EliminarlistMouseClicked(evt);
+            }
+        });
 
         try {
             posicionEliminarL.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
@@ -1273,43 +1314,71 @@ public class Main extends javax.swing.JFrame {
 
         jLabel18.setText("Posicion");
 
-        textArea2.setColumns(20);
-        textArea2.setRows(5);
-        jScrollPane7.setViewportView(textArea2);
+        AreaTexto2.setColumns(20);
+        AreaTexto2.setRows(5);
+        jScrollPane10.setViewportView(AreaTexto2);
+
+        jLabel21.setText("Las Listas son");
+
+        AgrgarAl_ta_3.setText("Agregar Lista de Programas");
+        AgrgarAl_ta_3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AgrgarAl_ta_3MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
         jPanel18Layout.setHorizontalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel18Layout.createSequentialGroup()
-                .addGap(105, 105, 105)
+                .addContainerGap()
+                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel18Layout.createSequentialGroup()
                         .addComponent(jLabel18)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(posicionEliminarL, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(Eliminarlist, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel18Layout.createSequentialGroup()
-                            .addGap(51, 51, 51)
-                            .addComponent(SalidaEliminarL))))
-                .addContainerGap(132, Short.MAX_VALUE))
+                        .addGap(40, 40, 40)
+                        .addComponent(posicionEliminarL, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(64, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(AgrgarAl_ta_3, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(92, 92, 92))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addComponent(Eliminarlist, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(SalidaEliminarL)
+                .addGap(81, 81, 81))
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel18Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addGap(76, 76, 76)
+                        .addComponent(jLabel21)
+                        .addGap(38, 38, 38))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addComponent(AgrgarAl_ta_3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(posicionEliminarL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel18))
+                        .addGap(43, 43, 43)))
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(posicionEliminarL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addComponent(Eliminarlist)
-                .addGap(18, 18, 18)
-                .addComponent(SalidaEliminarL)
-                .addContainerGap(27, Short.MAX_VALUE))
+                    .addComponent(Eliminarlist)
+                    .addComponent(SalidaEliminarL))
+                .addGap(21, 21, 21))
         );
 
         javax.swing.GroupLayout EliminarListasLayout = new javax.swing.GroupLayout(EliminarListas.getContentPane());
@@ -1465,18 +1534,37 @@ public class Main extends javax.swing.JFrame {
 
     private void AgrgarAl_ta_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgrgarAl_ta_1MouseClicked
         // TODO add your handling code here:
+        File fichero = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+        AreaTexto.setText("");
+        try {
+            JFileChooser jfc = new JFileChooser("./");
+            FileNameExtensionFilter filtro = new FileNameExtensionFilter("Archivos de Texto", "txt");
+            jfc.setFileFilter(filtro);
+            int seleccion = jfc.showOpenDialog(this);
+            if (seleccion == JFileChooser.APPROVE_OPTION) {
+                fichero = jfc.getSelectedFile();
+                fr = new FileReader(fichero);
+                br = new BufferedReader(fr);
+                String linea;
+                AreaTexto.setText("");
+                while ((linea = br.readLine()) != null) {
+                    AreaTexto.append(linea);
+                    AreaTexto.append("\n");
+                }
+            }
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            br.close();
+            fr.close();
+        } catch (IOException ex) {
+        }
 
     }//GEN-LAST:event_AgrgarAl_ta_1MouseClicked
-
-    private void ta_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ta_1MouseClicked
-        // TODO add your handling code here:
-        if (ta_1.getSelectedIndex() >= 0) {
-            if (evt.isMetaDown()) {
-                Programas.show(evt.getComponent(), evt.getX(), evt.getY());
-            }
-        }
-    }//GEN-LAST:event_ta_1MouseClicked
 
     private void ModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMouseClicked
         // TODO add your handling code here:
@@ -1679,16 +1767,6 @@ public class Main extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Modificado exitosamente");
     }//GEN-LAST:event_Guardar_nombreListaMouseClicked
 
-    private void NombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NombreMouseClicked
-        // TODO add your handling code here:
-        if (Integer.parseInt(posicionListas.getText())<0) {
-        }else{
-        ModificarNombreLista.pack();
-        ModificarNombreLista.setVisible(true);
-        ModificarLista.setVisible(false);
-        }
-    }//GEN-LAST:event_NombreMouseClicked
-
     private void ModificarListasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarListasMouseClicked
         // TODO add your handling code here:
         ModificarLista.pack();
@@ -1797,6 +1875,144 @@ public class Main extends javax.swing.JFrame {
         EliminarListas.setVisible(false);
     }//GEN-LAST:event_SalidaEliminarLMouseClicked
 
+    private void GuardarListaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarListaMouseClicked
+        // TODO add your handling code here:
+
+        try {
+            if (NombreALista.getText().equals("") ) {
+                JOptionPane.showMessageDialog(this, "No se puede guardar porque hay un campo vacio");
+            }
+            
+            String nombre, tipo;
+                administrarListas al = new administrarListas("./Listas.txt");
+                al.cargarArchivo();
+                nombre = NombreALista.getText();
+                
+                ListaDeClau p = new ListaDeClau(nombre);
+
+                al.getListalista().add(p);
+                al.escribirArchivo();
+                JOptionPane.showMessageDialog(this, "Guardado exitosamente!!");
+                NombreALista.setText("");
+            
+        } catch (Exception e) {
+
+        }
+        
+        
+    }//GEN-LAST:event_GuardarListaMouseClicked
+
+    private void AgrgarAl_ta_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgrgarAl_ta_2MouseClicked
+        // TODO add your handling code here:
+        File fichero = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+        AreaTexto1.setText("");
+        try {
+            JFileChooser jfc = new JFileChooser("./");
+            FileNameExtensionFilter filtro = new FileNameExtensionFilter("Archivos de Texto", "txt");
+            jfc.setFileFilter(filtro);
+            int seleccion = jfc.showOpenDialog(this);
+            if (seleccion == JFileChooser.APPROVE_OPTION) {
+                fichero = jfc.getSelectedFile();
+                fr = new FileReader(fichero);
+                br = new BufferedReader(fr);
+                String linea;
+                AreaTexto1.setText("");
+                while ((linea = br.readLine()) != null) {
+                    AreaTexto1.append(linea);
+                    AreaTexto1.append("\n");
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            br.close();
+            fr.close();
+        } catch (IOException ex) {
+        }
+        
+        
+    }//GEN-LAST:event_AgrgarAl_ta_2MouseClicked
+
+    private void GuardarMListaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarMListaMouseClicked
+        // TODO add your handling code here:
+        try {
+            administrarListas ap = new administrarListas("./Listas.txt");
+            int p;
+            String n;
+            p = Integer.parseInt(posicionListas.getText());
+            n = NombreListaM.getText();
+            ap.cargarArchivo();
+            ap.getListalista().get(p).setNombre(n);
+            ap.escribirArchivo();
+            
+            nombreM.setText("");
+            MenuModificar.pack();
+            MenuModificar.setVisible(true);
+            ModificarLista.setVisible(false);
+            AreaTexto1.setText("");
+            posicionListas.setText("");
+            JOptionPane.showMessageDialog(this, "Modificado exitosamente");
+        } catch (IOException ex) {
+        }
+        
+    }//GEN-LAST:event_GuardarMListaMouseClicked
+
+    private void AgrgarAl_ta_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgrgarAl_ta_3MouseClicked
+        // TODO add your handling code here:
+        File fichero = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+        AreaTexto2.setText("");
+        try {
+            JFileChooser jfc = new JFileChooser("./");
+            FileNameExtensionFilter filtro = new FileNameExtensionFilter("Archivos de Texto", "txt");
+            jfc.setFileFilter(filtro);
+            int seleccion = jfc.showOpenDialog(this);
+            if (seleccion == JFileChooser.APPROVE_OPTION) {
+                fichero = jfc.getSelectedFile();
+                fr = new FileReader(fichero);
+                br = new BufferedReader(fr);
+                String linea;
+                AreaTexto2.setText("");
+                while ((linea = br.readLine()) != null) {
+                    AreaTexto2.append(linea);
+                    AreaTexto2.append("\n");
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            br.close();
+            fr.close();
+        } catch (IOException ex) {
+        }
+        
+    }//GEN-LAST:event_AgrgarAl_ta_3MouseClicked
+
+    private void EliminarlistMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarlistMouseClicked
+        // TODO add your handling code here:
+        try {
+            administrarListas ap = new administrarListas("./Listas.txt");  
+            int p;        
+            p=Integer.parseInt(posicionEliminarL.getText());       
+            ap.cargarArchivo();
+            ap.getListalista().remove(p);
+            ap.escribirArchivo();
+            JOptionPane.showMessageDialog(this, "Eliminado exitosamente");
+            posicionEliminarL.setText("");
+            AreaTexto2.setText("");
+        } catch (IOException ex) {
+        }
+        
+        
+    }//GEN-LAST:event_EliminarlistMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1839,6 +2055,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton AgregarP;
     private javax.swing.JDialog AgregarProgramas;
     private javax.swing.JButton AgrgarAl_ta_1;
+    private javax.swing.JButton AgrgarAl_ta_2;
+    private javax.swing.JButton AgrgarAl_ta_3;
+    private javax.swing.JTextArea AreaTexto;
+    private javax.swing.JTextArea AreaTexto1;
+    private javax.swing.JTextArea AreaTexto2;
     private javax.swing.JFormattedTextField AñoLanzamientoAprograma;
     private javax.swing.JFormattedTextField AñoLanzamientoM;
     private javax.swing.JButton EliminarL;
@@ -1853,6 +2074,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton GuardarLista;
     private javax.swing.JButton GuardarMGenero;
     private javax.swing.JButton GuardarMLanzamiento;
+    private javax.swing.JButton GuardarMLista;
     private javax.swing.JButton GuardarMPuntaje;
     private javax.swing.JButton GuardarMTipo;
     private javax.swing.JButton GuardarPrograma;
@@ -1882,9 +2104,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JDialog ModificarPuntuacion;
     private javax.swing.JButton ModificarT;
     private javax.swing.JDialog ModificarTipo;
-    private javax.swing.JButton Nombre;
     private javax.swing.JTextField NombreALista;
     private javax.swing.JTextField NombreAPrograma;
+    private javax.swing.JTextField NombreListaM;
     private javax.swing.JTextField NombreMLista;
     private javax.swing.JFormattedTextField PuntuacionAPrograma;
     private javax.swing.JFormattedTextField PuntuacionM;
@@ -1912,7 +2134,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1939,13 +2164,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextField nombreM;
@@ -1953,10 +2177,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField posicionEliminarL;
     private javax.swing.JFormattedTextField posicionEliminarP;
     private javax.swing.JFormattedTextField posicionListas;
-    private javax.swing.JList<String> ta_1;
     private javax.swing.JTextArea textArea;
     private javax.swing.JTextArea textArea1;
-    private javax.swing.JTextArea textArea2;
     // End of variables declaration//GEN-END:variables
 ArrayList programas = new ArrayList();
 }
