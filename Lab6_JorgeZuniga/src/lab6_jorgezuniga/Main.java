@@ -162,13 +162,15 @@ public class Main extends javax.swing.JFrame {
         ListarProgramas = new javax.swing.JDialog();
         jPanel14 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        AreaTexto4 = new javax.swing.JTextArea();
         SalidaListarP = new javax.swing.JButton();
+        AgrgarAl_ta_5 = new javax.swing.JButton();
         ListarListas = new javax.swing.JDialog();
         jPanel15 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        AreaTexto3 = new javax.swing.JTextArea();
         SalidaListarL = new javax.swing.JButton();
+        AgrgarAl_ta_4 = new javax.swing.JButton();
         MenuListar = new javax.swing.JDialog();
         jPanel13 = new javax.swing.JPanel();
         ListarP = new javax.swing.JButton();
@@ -1026,14 +1028,21 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane4.setViewportView(jTextArea2);
+        AreaTexto4.setColumns(20);
+        AreaTexto4.setRows(5);
+        jScrollPane4.setViewportView(AreaTexto4);
 
         SalidaListarP.setText("Salida");
         SalidaListarP.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 SalidaListarPMouseClicked(evt);
+            }
+        });
+
+        AgrgarAl_ta_5.setText("Listar Programas");
+        AgrgarAl_ta_5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AgrgarAl_ta_5MouseClicked(evt);
             }
         });
 
@@ -1043,15 +1052,22 @@ public class Main extends javax.swing.JFrame {
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane4)
             .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGap(154, 154, 154)
-                .addComponent(SalidaListarP)
-                .addContainerGap(183, Short.MAX_VALUE))
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(154, 154, 154)
+                        .addComponent(SalidaListarP))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(AgrgarAl_ta_5, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(AgrgarAl_ta_5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addComponent(SalidaListarP)
                 .addContainerGap())
         );
@@ -1067,14 +1083,21 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane5.setViewportView(jTextArea3);
+        AreaTexto3.setColumns(20);
+        AreaTexto3.setRows(5);
+        jScrollPane5.setViewportView(AreaTexto3);
 
         SalidaListarL.setText("Salida");
         SalidaListarL.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 SalidaListarLMouseClicked(evt);
+            }
+        });
+
+        AgrgarAl_ta_4.setText("Agregar Listas");
+        AgrgarAl_ta_4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AgrgarAl_ta_4MouseClicked(evt);
             }
         });
 
@@ -1087,12 +1110,18 @@ public class Main extends javax.swing.JFrame {
                 .addGap(154, 154, 154)
                 .addComponent(SalidaListarL)
                 .addContainerGap(183, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(AgrgarAl_ta_4, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(104, 104, 104))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(AgrgarAl_ta_4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(SalidaListarL)
                 .addContainerGap())
         );
@@ -1320,7 +1349,7 @@ public class Main extends javax.swing.JFrame {
 
         jLabel21.setText("Las Listas son");
 
-        AgrgarAl_ta_3.setText("Agregar Lista de Programas");
+        AgrgarAl_ta_3.setText("Agregar Listas");
         AgrgarAl_ta_3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AgrgarAl_ta_3MouseClicked(evt);
@@ -2013,6 +2042,75 @@ public class Main extends javax.swing.JFrame {
         
     }//GEN-LAST:event_EliminarlistMouseClicked
 
+    private void AgrgarAl_ta_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgrgarAl_ta_4MouseClicked
+        // TODO add your handling code here:
+        File fichero = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+        AreaTexto3.setText("");
+        try {
+            JFileChooser jfc = new JFileChooser("./");
+            FileNameExtensionFilter filtro = new FileNameExtensionFilter("Archivos de Texto", "txt");
+            jfc.setFileFilter(filtro);
+            int seleccion = jfc.showOpenDialog(this);
+            if (seleccion == JFileChooser.APPROVE_OPTION) {
+                fichero = jfc.getSelectedFile();
+                fr = new FileReader(fichero);
+                br = new BufferedReader(fr);
+                String linea;
+                AreaTexto3.setText("");
+                while ((linea = br.readLine()) != null) {
+                    AreaTexto3.append(linea);
+                    AreaTexto3.append("\n");
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            br.close();
+            fr.close();
+        } catch (IOException ex) {
+        }
+    }//GEN-LAST:event_AgrgarAl_ta_4MouseClicked
+
+    private void AgrgarAl_ta_5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgrgarAl_ta_5MouseClicked
+        // TODO add your handling code here:
+        File fichero = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+        AreaTexto4.setText("");
+        try {
+            JFileChooser jfc = new JFileChooser("./");
+            FileNameExtensionFilter filtro = new FileNameExtensionFilter("Archivos de Texto", "txt");
+            jfc.setFileFilter(filtro);
+            int seleccion = jfc.showOpenDialog(this);
+            if (seleccion == JFileChooser.APPROVE_OPTION) {
+                fichero = jfc.getSelectedFile();
+                fr = new FileReader(fichero);
+                br = new BufferedReader(fr);
+                String linea;
+                AreaTexto4.setText("");
+                while ((linea = br.readLine()) != null) {
+                    AreaTexto4.append(linea);
+                    AreaTexto4.append("\n");
+                }
+            }else{
+                
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            br.close();
+            fr.close();
+        } catch (IOException ex) {
+        }
+        
+    }//GEN-LAST:event_AgrgarAl_ta_5MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2057,9 +2155,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton AgrgarAl_ta_1;
     private javax.swing.JButton AgrgarAl_ta_2;
     private javax.swing.JButton AgrgarAl_ta_3;
+    private javax.swing.JButton AgrgarAl_ta_4;
+    private javax.swing.JButton AgrgarAl_ta_5;
     private javax.swing.JTextArea AreaTexto;
     private javax.swing.JTextArea AreaTexto1;
     private javax.swing.JTextArea AreaTexto2;
+    private javax.swing.JTextArea AreaTexto3;
+    private javax.swing.JTextArea AreaTexto4;
     private javax.swing.JFormattedTextField AñoLanzamientoAprograma;
     private javax.swing.JFormattedTextField AñoLanzamientoM;
     private javax.swing.JButton EliminarL;
@@ -2170,8 +2272,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextField nombreM;
     private javax.swing.JFormattedTextField posicion;
     private javax.swing.JFormattedTextField posicionEliminarL;
