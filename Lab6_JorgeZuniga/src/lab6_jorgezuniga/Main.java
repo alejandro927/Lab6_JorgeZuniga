@@ -45,7 +45,7 @@ public class Main extends javax.swing.JFrame {
         modeloGenero.addElement("Sustenso");
         modeloGenero.addElement("Accion");
         GeneroAPrograma.setModel(modeloGenero);
-        
+
         DefaultComboBoxModel modeloTipoM = (DefaultComboBoxModel) TipoM.getModel();
         modeloTipoM.addElement("Anime");
         modeloTipoM.addElement("Serie");
@@ -97,11 +97,9 @@ public class Main extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         NombreALista = new javax.swing.JTextField();
         GuardarLista = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
         SalidaAgregarLista = new javax.swing.JButton();
-        AgrgarAl_ta_1 = new javax.swing.JButton();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        AreaTexto = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        lista3 = new javax.swing.JList<>();
         MenuModificar = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
         ModificarPrograma = new javax.swing.JButton();
@@ -115,21 +113,14 @@ public class Main extends javax.swing.JFrame {
         ModificarT = new javax.swing.JButton();
         ModificarG = new javax.swing.JButton();
         SalidaMenuM = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        textArea = new javax.swing.JTextArea();
-        jLabel10 = new javax.swing.JLabel();
-        posicion = new javax.swing.JFormattedTextField();
+        combo1 = new javax.swing.JComboBox<>();
         ModificarLista = new javax.swing.JDialog();
         jPanel11 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        posicionListas = new javax.swing.JFormattedTextField();
         jLabel19 = new javax.swing.JLabel();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        AreaTexto1 = new javax.swing.JTextArea();
-        AgrgarAl_ta_2 = new javax.swing.JButton();
         GuardarMLista = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         NombreListaM = new javax.swing.JTextField();
+        combo2 = new javax.swing.JComboBox<>();
         ModificarNombre = new javax.swing.JDialog();
         jPanel7 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
@@ -161,16 +152,16 @@ public class Main extends javax.swing.JFrame {
         Guardar_nombreLista = new javax.swing.JButton();
         ListarProgramas = new javax.swing.JDialog();
         jPanel14 = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        AreaTexto4 = new javax.swing.JTextArea();
         SalidaListarP = new javax.swing.JButton();
         AgrgarAl_ta_5 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        lista1 = new javax.swing.JList<>();
         ListarListas = new javax.swing.JDialog();
         jPanel15 = new javax.swing.JPanel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        AreaTexto3 = new javax.swing.JTextArea();
         SalidaListarL = new javax.swing.JButton();
         AgrgarAl_ta_4 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        lista2 = new javax.swing.JList<>();
         MenuListar = new javax.swing.JDialog();
         jPanel13 = new javax.swing.JPanel();
         ListarP = new javax.swing.JButton();
@@ -183,22 +174,14 @@ public class Main extends javax.swing.JFrame {
         SalidaMenuEliminar = new javax.swing.JButton();
         EliminarProgramas = new javax.swing.JDialog();
         jPanel17 = new javax.swing.JPanel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        textArea1 = new javax.swing.JTextArea();
-        jLabel17 = new javax.swing.JLabel();
-        posicionEliminarP = new javax.swing.JFormattedTextField();
         EliminarPr = new javax.swing.JButton();
         SalidaEliminarP = new javax.swing.JButton();
+        comboEliminar1 = new javax.swing.JComboBox<>();
         EliminarListas = new javax.swing.JDialog();
         jPanel18 = new javax.swing.JPanel();
         SalidaEliminarL = new javax.swing.JButton();
         Eliminarlist = new javax.swing.JButton();
-        posicionEliminarL = new javax.swing.JFormattedTextField();
-        jLabel18 = new javax.swing.JLabel();
-        jScrollPane10 = new javax.swing.JScrollPane();
-        AreaTexto2 = new javax.swing.JTextArea();
-        jLabel21 = new javax.swing.JLabel();
-        AgrgarAl_ta_3 = new javax.swing.JButton();
+        comboEliminar2 = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         Agregar = new javax.swing.JButton();
         Modificar = new javax.swing.JButton();
@@ -235,9 +218,8 @@ public class Main extends javax.swing.JFrame {
                 .addGap(126, 126, 126)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(SalidaMenuAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(AgregarList, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(AgregarP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(AgregarList, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(AgregarP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(145, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -377,8 +359,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setText("Los programas son:");
-
         SalidaAgregarLista.setText("Salir");
         SalidaAgregarLista.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -386,16 +366,12 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        AgrgarAl_ta_1.setText("Agregar Lista de Programas");
-        AgrgarAl_ta_1.addMouseListener(new java.awt.event.MouseAdapter() {
+        lista3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AgrgarAl_ta_1MouseClicked(evt);
+                lista3MouseClicked(evt);
             }
         });
-
-        AreaTexto.setColumns(20);
-        AreaTexto.setRows(5);
-        jScrollPane8.setViewportView(AreaTexto);
+        jScrollPane3.setViewportView(lista3);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -405,22 +381,18 @@ public class Main extends javax.swing.JFrame {
                 .addGap(45, 45, 45)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8))
-                        .addGap(45, 45, 45)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(NombreALista, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)))
+                        .addComponent(jLabel7)
+                        .addGap(105, 105, 105)
+                        .addComponent(NombreALista, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(GuardarLista, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(47, 47, 47)
                         .addComponent(SalidaAgregarLista, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(AgrgarAl_ta_1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -429,17 +401,9 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(NombreALista, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(48, 48, 48)))
-                .addComponent(AgrgarAl_ta_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
+                .addGap(38, 38, 38)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(GuardarLista, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
                     .addComponent(SalidaAgregarLista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -558,71 +522,60 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        textArea.setColumns(20);
-        textArea.setRows(5);
-        jScrollPane1.setViewportView(textArea);
-
-        jLabel10.setText("Posicion");
-
-        try {
-            posicion.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
+        combo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                combo1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(129, 129, 129)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(SalidaMenuM)
+                    .addComponent(ModificarG))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ModificarL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ModificarN, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ModificarT)
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ModificarL)
-                                    .addComponent(ModificarP)
-                                    .addComponent(ModificarN))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel6Layout.createSequentialGroup()
-                                        .addComponent(jLabel10)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(posicion, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addContainerGap())
+                            .addComponent(ModificarP, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(ModificarT, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(ModificarG)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(SalidaMenuM)
-                        .addGap(76, 76, 76))))
+                        .addContainerGap()
+                        .addComponent(combo1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(ModificarN)
-                .addGap(18, 18, 18)
-                .addComponent(ModificarP)
-                .addGap(18, 18, 18)
-                .addComponent(ModificarL)
-                .addGap(18, 18, 18)
-                .addComponent(ModificarT)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
+                .addComponent(combo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ModificarN)
+                            .addComponent(ModificarP))
+                        .addGap(51, 51, 51))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ModificarT)
+                            .addComponent(ModificarL))))
+                .addGap(55, 55, 55)
                 .addComponent(ModificarG)
-                .addContainerGap(58, Short.MAX_VALUE))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(posicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(42, 42, 42)
                 .addComponent(SalidaMenuM)
-                .addGap(35, 35, 35))
+                .addGap(38, 38, 38))
         );
 
         javax.swing.GroupLayout ModificarProgramasLayout = new javax.swing.GroupLayout(ModificarProgramas.getContentPane());
@@ -636,26 +589,7 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jLabel15.setText("Posicion");
-
-        try {
-            posicionListas.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
         jLabel19.setText("Las Listas son");
-
-        AreaTexto1.setColumns(20);
-        AreaTexto1.setRows(5);
-        jScrollPane9.setViewportView(AreaTexto1);
-
-        AgrgarAl_ta_2.setText("Agregar Lista de Programas");
-        AgrgarAl_ta_2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AgrgarAl_ta_2MouseClicked(evt);
-            }
-        });
 
         GuardarMLista.setText("Guardar");
         GuardarMLista.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -670,55 +604,34 @@ public class Main extends javax.swing.JFrame {
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(109, 109, 109)
-                .addComponent(jLabel15)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addComponent(posicionListas, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(139, 139, 139))
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(AgrgarAl_ta_2, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGap(151, 151, 151)
                         .addComponent(GuardarMLista))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addComponent(jLabel20)
-                                .addGap(89, 89, 89)
-                                .addComponent(NombreListaM, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(NombreListaM, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(combo2, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(71, 71, 71)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel20)
                     .addComponent(NombreListaM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                        .addComponent(jLabel19)
-                        .addGap(32, 32, 32)))
-                .addComponent(AgrgarAl_ta_2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(posicionListas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(combo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel19))
+                .addGap(91, 91, 91)
                 .addComponent(GuardarMLista)
                 .addGap(25, 25, 25))
         );
@@ -1028,10 +941,6 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        AreaTexto4.setColumns(20);
-        AreaTexto4.setRows(5);
-        jScrollPane4.setViewportView(AreaTexto4);
-
         SalidaListarP.setText("Salida");
         SalidaListarP.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1046,11 +955,12 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane1.setViewportView(lista1);
+
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane4)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel14Layout.createSequentialGroup()
@@ -1058,14 +968,18 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(SalidaListarP))
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addGap(104, 104, 104)
-                        .addComponent(AgrgarAl_ta_5, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(108, Short.MAX_VALUE))
+                        .addComponent(AgrgarAl_ta_5, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGap(15, 15, 15)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(AgrgarAl_ta_5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addComponent(SalidaListarP)
@@ -1083,10 +997,6 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        AreaTexto3.setColumns(20);
-        AreaTexto3.setRows(5);
-        jScrollPane5.setViewportView(AreaTexto3);
-
         SalidaListarL.setText("Salida");
         SalidaListarL.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1101,27 +1011,33 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane2.setViewportView(lista2);
+
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane5)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                .addContainerGap(108, Short.MAX_VALUE)
+                .addComponent(AgrgarAl_ta_4, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(104, 104, 104))
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGap(154, 154, 154)
                 .addComponent(SalidaListarL)
-                .addContainerGap(183, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(AgrgarAl_ta_4, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
                 .addComponent(AgrgarAl_ta_4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addComponent(SalidaListarL)
                 .addContainerGap())
         );
@@ -1249,18 +1165,6 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        textArea1.setColumns(20);
-        textArea1.setRows(5);
-        jScrollPane6.setViewportView(textArea1);
-
-        jLabel17.setText("Posicion");
-
-        try {
-            posicionEliminarP.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
         EliminarPr.setText("Eliminar");
         EliminarPr.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1275,35 +1179,36 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        comboEliminar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboEliminar1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGap(105, 105, 105)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addComponent(jLabel17)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(posicionEliminarP, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(EliminarPr, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel17Layout.createSequentialGroup()
-                            .addGap(51, 51, 51)
-                            .addComponent(SalidaEliminarP))))
-                .addContainerGap(132, Short.MAX_VALUE))
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(EliminarPr, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel17Layout.createSequentialGroup()
+                                .addGap(156, 156, 156)
+                                .addComponent(SalidaEliminarP)))
+                        .addGap(0, 169, Short.MAX_VALUE))
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(comboEliminar1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(posicionEliminarP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
+                .addGap(86, 86, 86)
+                .addComponent(comboEliminar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(95, 95, 95)
                 .addComponent(EliminarPr)
                 .addGap(18, 18, 18)
                 .addComponent(SalidaEliminarP)
@@ -1335,24 +1240,9 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        try {
-            posicionEliminarL.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
-        jLabel18.setText("Posicion");
-
-        AreaTexto2.setColumns(20);
-        AreaTexto2.setRows(5);
-        jScrollPane10.setViewportView(AreaTexto2);
-
-        jLabel21.setText("Las Listas son");
-
-        AgrgarAl_ta_3.setText("Agregar Listas");
-        AgrgarAl_ta_3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AgrgarAl_ta_3MouseClicked(evt);
+        comboEliminar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboEliminar2ActionPerformed(evt);
             }
         });
 
@@ -1360,50 +1250,23 @@ public class Main extends javax.swing.JFrame {
         jPanel18.setLayout(jPanel18Layout);
         jPanel18Layout.setHorizontalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addComponent(jLabel18)
-                        .addGap(40, 40, 40)
-                        .addComponent(posicionEliminarL, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(64, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(AgrgarAl_ta_3, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(92, 92, 92))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
                 .addGap(88, 88, 88)
                 .addComponent(Eliminarlist, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
                 .addComponent(SalidaEliminarL)
                 .addGap(81, 81, 81))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(comboEliminar2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel18Layout.createSequentialGroup()
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addComponent(jLabel21)
-                        .addGap(38, 38, 38))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addComponent(AgrgarAl_ta_3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(posicionEliminarL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel18))
-                        .addGap(43, 43, 43)))
+                .addGap(89, 89, 89)
+                .addComponent(comboEliminar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Eliminarlist)
                     .addComponent(SalidaEliminarL))
@@ -1551,6 +1414,13 @@ public class Main extends javax.swing.JFrame {
         AgregarLista.pack();
         AgregarLista.setVisible(true);
         MenuAgregar.setVisible(false);
+        AdministrarProgramas ap = new AdministrarProgramas("./Programas.txt");
+        DefaultListModel model = new DefaultListModel();
+        ap.cargarArchivo();
+        for (Programas t : ap.getListaProgramas()) {
+            model.addElement(t);
+        }
+        lista3.setModel(model);
 
     }//GEN-LAST:event_AgregarListMouseClicked
 
@@ -1560,40 +1430,6 @@ public class Main extends javax.swing.JFrame {
         MenuAgregar.setVisible(true);
         AgregarLista.setVisible(false);
     }//GEN-LAST:event_SalidaAgregarListaMouseClicked
-
-    private void AgrgarAl_ta_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgrgarAl_ta_1MouseClicked
-        // TODO add your handling code here:
-        File fichero = null;
-        FileReader fr = null;
-        BufferedReader br = null;
-        AreaTexto.setText("");
-        try {
-            JFileChooser jfc = new JFileChooser("./");
-            FileNameExtensionFilter filtro = new FileNameExtensionFilter("Archivos de Texto", "txt");
-            jfc.setFileFilter(filtro);
-            int seleccion = jfc.showOpenDialog(this);
-            if (seleccion == JFileChooser.APPROVE_OPTION) {
-                fichero = jfc.getSelectedFile();
-                fr = new FileReader(fichero);
-                br = new BufferedReader(fr);
-                String linea;
-                AreaTexto.setText("");
-                while ((linea = br.readLine()) != null) {
-                    AreaTexto.append(linea);
-                    AreaTexto.append("\n");
-                }
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            br.close();
-            fr.close();
-        } catch (IOException ex) {
-        }
-
-    }//GEN-LAST:event_AgrgarAl_ta_1MouseClicked
 
     private void ModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMouseClicked
         // TODO add your handling code here:
@@ -1623,29 +1459,29 @@ public class Main extends javax.swing.JFrame {
         MenuModificar.setVisible(false);
         AdministrarProgramas ap = new AdministrarProgramas("./Programas.txt");
         ap.cargarArchivo();
-        for (Programas t : ap.getListaProgramas()) {
-            System.out.println(ap.getListaProgramas().indexOf(t) + "- " + t);
-        }
-
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel(ap.getListaProgramas().toArray());
+        combo1.setModel(modelo);
     }//GEN-LAST:event_ModificarProgramaMouseClicked
 
     private void Guardar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Guardar1MouseClicked
         // TODO add your handling code here:
         try {
             AdministrarProgramas ap = new AdministrarProgramas("./Programas.txt");
-            int p;
             String n;
-            p = Integer.parseInt(posicion.getText());
             n = nombreM.getText();
             ap.cargarArchivo();
-            ap.getListaProgramas().get(p).setNombre(n);
+            ap.getListaProgramas().get(combo1.getSelectedIndex()).setNombre(n);
             ap.escribirArchivo();
-            
+
             nombreM.setText("");
             ModificarProgramas.pack();
             ModificarProgramas.setVisible(true);
             ModificarNombre.setVisible(false);
             JOptionPane.showMessageDialog(this, "Modificado exitosamente");
+            AdministrarProgramas ap1 = new AdministrarProgramas("./Programas.txt");
+            ap1.cargarArchivo();
+            DefaultComboBoxModel modelo = new DefaultComboBoxModel(ap1.getListaProgramas().toArray());
+            combo1.setModel(modelo);
         } catch (IOException ex) {
         }
 
@@ -1653,85 +1489,89 @@ public class Main extends javax.swing.JFrame {
 
     private void ModificarNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarNMouseClicked
         // TODO add your handling code here:
-        if (Integer.parseInt(posicion.getText())<0) {
-            
-        }else{
+
         ModificarNombre.pack();
         ModificarNombre.setVisible(true);
         ModificarProgramas.setVisible(false);
-        }
+
     }//GEN-LAST:event_ModificarNMouseClicked
 
     private void ModificarPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarPMouseClicked
         // TODO add your handling code here:
-        if (Integer.parseInt(posicion.getText())<0) {
-            
-        }else{
+
         ModificarPuntuacion.pack();
         ModificarPuntuacion.setVisible(true);
         ModificarProgramas.setVisible(false);
-        }
+
     }//GEN-LAST:event_ModificarPMouseClicked
 
     private void GuardarMPuntajeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarMPuntajeMouseClicked
         // TODO add your handling code here:
         try {
             AdministrarProgramas ap = new AdministrarProgramas("./Programas.txt");
-            int p,n;
-            p = Integer.parseInt(posicion.getText());
+            int n;
             n = Integer.parseInt(PuntuacionM.getText());
             ap.cargarArchivo();
-            ap.getListaProgramas().get(p).setPuntuacion(n);
+            ap.getListaProgramas().get(combo1.getSelectedIndex()).setPuntuacion(n);
             ap.escribirArchivo();
-            
+
             PuntuacionM.setText("");
             ModificarProgramas.pack();
             ModificarProgramas.setVisible(true);
             ModificarPuntuacion.setVisible(false);
             JOptionPane.showMessageDialog(this, "Modificado exitosamente");
+            AdministrarProgramas ap1 = new AdministrarProgramas("./Programas.txt");
+            ap1.cargarArchivo();
+            DefaultComboBoxModel modelo = new DefaultComboBoxModel(ap1.getListaProgramas().toArray());
+            combo1.setModel(modelo);
         } catch (IOException ex) {
         }
-        
+
     }//GEN-LAST:event_GuardarMPuntajeMouseClicked
 
     private void GuardarMLanzamientoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarMLanzamientoMouseClicked
         // TODO add your handling code here:
         try {
             AdministrarProgramas ap = new AdministrarProgramas("./Programas.txt");
-            int p,n;
-            p = Integer.parseInt(posicion.getText());
+            int n;
             n = Integer.parseInt(AñoLanzamientoM.getText());
             ap.cargarArchivo();
-            ap.getListaProgramas().get(p).setAnoLanzamiento(n);
+            ap.getListaProgramas().get(combo1.getSelectedIndex()).setAnoLanzamiento(n);
             ap.escribirArchivo();
-            
+
             AñoLanzamientoM.setText("");
             ModificarProgramas.pack();
             ModificarProgramas.setVisible(true);
             ModificarPuntuacion.setVisible(false);
             JOptionPane.showMessageDialog(this, "Modificado exitosamente");
+            AdministrarProgramas ap1 = new AdministrarProgramas("./Programas.txt");
+            ap1.cargarArchivo();
+            DefaultComboBoxModel modelo = new DefaultComboBoxModel(ap1.getListaProgramas().toArray());
+            combo1.setModel(modelo);
         } catch (IOException ex) {
         }
-        
+
     }//GEN-LAST:event_GuardarMLanzamientoMouseClicked
 
     private void GuardarMGeneroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarMGeneroMouseClicked
         // TODO add your handling code here:
         try {
             AdministrarProgramas ap = new AdministrarProgramas("./Programas.txt");
-            int p;
             String n;
-            p = Integer.parseInt(posicion.getText());
             n = GeneroM.getSelectedItem().toString();
             ap.cargarArchivo();
-            ap.getListaProgramas().get(p).setGenero(n);
+            ap.getListaProgramas().get(combo1.getSelectedIndex()).setGenero(n);
             ap.escribirArchivo();
-            
+
             GeneroM.setSelectedIndex(0);
             ModificarProgramas.pack();
             ModificarProgramas.setVisible(true);
             ModificarGenero.setVisible(false);
             JOptionPane.showMessageDialog(this, "Modificado exitosamente");
+            AdministrarProgramas ap1 = new AdministrarProgramas("./Programas.txt");
+            ap1.cargarArchivo();
+            DefaultComboBoxModel modelo = new DefaultComboBoxModel(ap1.getListaProgramas().toArray());
+            combo1.setModel(modelo);
         } catch (IOException ex) {
         }
     }//GEN-LAST:event_GuardarMGeneroMouseClicked
@@ -1740,56 +1580,56 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             AdministrarProgramas ap = new AdministrarProgramas("./Programas.txt");
-            int p;
+
             String n;
-            p = Integer.parseInt(posicion.getText());
             n = TipoM.getSelectedItem().toString();
             ap.cargarArchivo();
-            ap.getListaProgramas().get(p).setTipo(n);
+            ap.getListaProgramas().get(combo1.getSelectedIndex()).setTipo(n);
             ap.escribirArchivo();
-            
+
             TipoM.setSelectedIndex(0);
             ModificarProgramas.pack();
             ModificarProgramas.setVisible(true);
             ModificarTipo.setVisible(false);
             JOptionPane.showMessageDialog(this, "Modificado exitosamente");
+            AdministrarProgramas ap1 = new AdministrarProgramas("./Programas.txt");
+            ap1.cargarArchivo();
+            DefaultComboBoxModel modelo = new DefaultComboBoxModel(ap1.getListaProgramas().toArray());
+            combo1.setModel(modelo);
         } catch (IOException ex) {
         }
     }//GEN-LAST:event_GuardarMTipoMouseClicked
 
     private void ModificarLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarLMouseClicked
         // TODO add your handling code here:
-        if (Integer.parseInt(posicion.getText())<0) {
-            
-        }else{
+
         ModificarLanzamiento.pack();
         ModificarLanzamiento.setVisible(true);
-        ModificarProgramas.setVisible(false);}
+        ModificarProgramas.setVisible(false);
+
     }//GEN-LAST:event_ModificarLMouseClicked
 
     private void ModificarTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarTMouseClicked
         // TODO add your handling code here:
-        if (Integer.parseInt(posicion.getText())<0) {
-        }else{
+
         ModificarTipo.pack();
         ModificarTipo.setVisible(true);
         ModificarProgramas.setVisible(false);
-        }
+
     }//GEN-LAST:event_ModificarTMouseClicked
 
     private void ModificarGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarGMouseClicked
         // TODO add your handling code here:
-        if (Integer.parseInt(posicion.getText())<0) {
-        }else{
+
         ModificarGenero.pack();
         ModificarGenero.setVisible(true);
         ModificarProgramas.setVisible(false);
-        }
+
     }//GEN-LAST:event_ModificarGMouseClicked
 
     private void Guardar_nombreListaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Guardar_nombreListaMouseClicked
         // TODO add your handling code here:
-        
+
         ModificarLista.pack();
         ModificarLista.setVisible(true);
         ModificarNombreLista.setVisible(false);
@@ -1801,6 +1641,10 @@ public class Main extends javax.swing.JFrame {
         ModificarLista.pack();
         ModificarLista.setVisible(true);
         MenuModificar.setVisible(false);
+        administrarListas ap1 = new administrarListas("./Listas.txt");
+        ap1.cargarArchivo();
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel(ap1.getListalista().toArray());
+        combo2.setModel(modelo);
     }//GEN-LAST:event_ModificarListasMouseClicked
 
     private void ListarPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ListarPMouseClicked
@@ -1808,11 +1652,6 @@ public class Main extends javax.swing.JFrame {
         ListarProgramas.pack();
         ListarProgramas.setVisible(true);
         MenuListar.setVisible(false);
-        AdministrarProgramas ap = new AdministrarProgramas("./Programas.txt");
-        ap.cargarArchivo();
-        for (Programas t : ap.getListaProgramas()) {
-            System.out.println(ap.getListaProgramas().indexOf(t) + "- " + t);
-        }
     }//GEN-LAST:event_ListarPMouseClicked
 
     private void ListarLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ListarLMouseClicked
@@ -1864,9 +1703,8 @@ public class Main extends javax.swing.JFrame {
         MenuEliminar.setVisible(false);
         AdministrarProgramas ap = new AdministrarProgramas("./Programas.txt");
         ap.cargarArchivo();
-        for (Programas t : ap.getListaProgramas()) {
-            System.out.println(ap.getListaProgramas().indexOf(t) + "- " + t);
-        }
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel(ap.getListaProgramas().toArray());
+        comboEliminar1.setModel(modelo);
     }//GEN-LAST:event_EliminarPMouseClicked
 
     private void EliminarLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarLMouseClicked
@@ -1874,18 +1712,28 @@ public class Main extends javax.swing.JFrame {
         EliminarListas.pack();
         EliminarListas.setVisible(true);
         MenuEliminar.setVisible(false);
+        administrarListas ap = new administrarListas("./Listas.txt");
+        ap.cargarArchivo();
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel(ap.getListalista().toArray());
+        comboEliminar2.setModel(modelo);
     }//GEN-LAST:event_EliminarLMouseClicked
 
     private void EliminarPrMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarPrMouseClicked
         // TODO add your handling code here:
         try {
-            AdministrarProgramas ap = new AdministrarProgramas("./Programas.txt");  
-            int p;        
-            p=Integer.parseInt(posicionEliminarP.getText());       
-            ap.cargarArchivo();
-            ap.getListaProgramas().remove(p);
-            ap.escribirArchivo();
-            JOptionPane.showMessageDialog(this, "Eliminado exitosamente");
+            if (comboEliminar1.getSelectedItem() == null) {
+                JOptionPane.showMessageDialog(null, "No se puede eliminar nada por que no existe ningun programa!!");
+            } else {
+                AdministrarProgramas ap = new AdministrarProgramas("./Programas.txt");
+                ap.cargarArchivo();
+                ap.getListaProgramas().remove(comboEliminar1.getSelectedIndex());
+                ap.escribirArchivo();
+                JOptionPane.showMessageDialog(this, "Eliminado exitosamente");
+                AdministrarProgramas ap1 = new AdministrarProgramas("./Programas.txt");
+                ap1.cargarArchivo();
+                DefaultComboBoxModel modelo = new DefaultComboBoxModel(ap.getListaProgramas().toArray());
+                comboEliminar1.setModel(modelo);
+            }
         } catch (IOException ex) {
         }
     }//GEN-LAST:event_EliminarPrMouseClicked
@@ -1908,208 +1756,117 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         try {
-            if (NombreALista.getText().equals("") ) {
+            if (NombreALista.getText()==null) {
                 JOptionPane.showMessageDialog(this, "No se puede guardar porque hay un campo vacio");
             }
-            
-            String nombre, tipo;
-                administrarListas al = new administrarListas("./Listas.txt");
-                al.cargarArchivo();
-                nombre = NombreALista.getText();
-                
-                ListaDeClau p = new ListaDeClau(nombre);
+            String nombre;
+            administrarListas al = new administrarListas("./Listas.txt");
+            al.cargarArchivo();
+            nombre = NombreALista.getText();
+            ListaDeClau p = new ListaDeClau(nombre);
+            al.getListalista().add(p);
+            al.escribirArchivo();
+            JOptionPane.showMessageDialog(this, "Guardado exitosamente!!");
+            NombreALista.setText("");
 
-                al.getListalista().add(p);
-                al.escribirArchivo();
-                JOptionPane.showMessageDialog(this, "Guardado exitosamente!!");
-                NombreALista.setText("");
-            
         } catch (Exception e) {
 
         }
-        
-        
+
+
     }//GEN-LAST:event_GuardarListaMouseClicked
-
-    private void AgrgarAl_ta_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgrgarAl_ta_2MouseClicked
-        // TODO add your handling code here:
-        File fichero = null;
-        FileReader fr = null;
-        BufferedReader br = null;
-        AreaTexto1.setText("");
-        try {
-            JFileChooser jfc = new JFileChooser("./");
-            FileNameExtensionFilter filtro = new FileNameExtensionFilter("Archivos de Texto", "txt");
-            jfc.setFileFilter(filtro);
-            int seleccion = jfc.showOpenDialog(this);
-            if (seleccion == JFileChooser.APPROVE_OPTION) {
-                fichero = jfc.getSelectedFile();
-                fr = new FileReader(fichero);
-                br = new BufferedReader(fr);
-                String linea;
-                AreaTexto1.setText("");
-                while ((linea = br.readLine()) != null) {
-                    AreaTexto1.append(linea);
-                    AreaTexto1.append("\n");
-                }
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            br.close();
-            fr.close();
-        } catch (IOException ex) {
-        }
-        
-        
-    }//GEN-LAST:event_AgrgarAl_ta_2MouseClicked
 
     private void GuardarMListaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarMListaMouseClicked
         // TODO add your handling code here:
         try {
             administrarListas ap = new administrarListas("./Listas.txt");
-            int p;
             String n;
-            p = Integer.parseInt(posicionListas.getText());
             n = NombreListaM.getText();
             ap.cargarArchivo();
-            ap.getListalista().get(p).setNombre(n);
+            ap.getListalista().get(combo2.getSelectedIndex()).setNombre(n);
             ap.escribirArchivo();
-            
+
             nombreM.setText("");
             MenuModificar.pack();
             MenuModificar.setVisible(true);
             ModificarLista.setVisible(false);
-            AreaTexto1.setText("");
-            posicionListas.setText("");
             JOptionPane.showMessageDialog(this, "Modificado exitosamente");
         } catch (IOException ex) {
         }
-        
+
     }//GEN-LAST:event_GuardarMListaMouseClicked
-
-    private void AgrgarAl_ta_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgrgarAl_ta_3MouseClicked
-        // TODO add your handling code here:
-        File fichero = null;
-        FileReader fr = null;
-        BufferedReader br = null;
-        AreaTexto2.setText("");
-        try {
-            JFileChooser jfc = new JFileChooser("./");
-            FileNameExtensionFilter filtro = new FileNameExtensionFilter("Archivos de Texto", "txt");
-            jfc.setFileFilter(filtro);
-            int seleccion = jfc.showOpenDialog(this);
-            if (seleccion == JFileChooser.APPROVE_OPTION) {
-                fichero = jfc.getSelectedFile();
-                fr = new FileReader(fichero);
-                br = new BufferedReader(fr);
-                String linea;
-                AreaTexto2.setText("");
-                while ((linea = br.readLine()) != null) {
-                    AreaTexto2.append(linea);
-                    AreaTexto2.append("\n");
-                }
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            br.close();
-            fr.close();
-        } catch (IOException ex) {
-        }
-        
-    }//GEN-LAST:event_AgrgarAl_ta_3MouseClicked
 
     private void EliminarlistMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarlistMouseClicked
         // TODO add your handling code here:
         try {
-            administrarListas ap = new administrarListas("./Listas.txt");  
-            int p;        
-            p=Integer.parseInt(posicionEliminarL.getText());       
-            ap.cargarArchivo();
-            ap.getListalista().remove(p);
-            ap.escribirArchivo();
-            JOptionPane.showMessageDialog(this, "Eliminado exitosamente");
-            posicionEliminarL.setText("");
-            AreaTexto2.setText("");
+            if (comboEliminar1.getSelectedItem() == null) {
+                JOptionPane.showMessageDialog(null, "No se puede eliminar nada por que no existe ninguna Lista!!");
+            } else {
+                administrarListas ap = new administrarListas("./Listas.txt");
+                ap.cargarArchivo();
+                ap.getListalista().remove(comboEliminar2.getSelectedIndex());
+                ap.escribirArchivo();
+                JOptionPane.showMessageDialog(this, "Eliminado exitosamente");
+                administrarListas ap1 = new administrarListas("./Listas.txt");
+                ap1.cargarArchivo();
+                DefaultComboBoxModel modelo = new DefaultComboBoxModel(ap1.getListalista().toArray());
+                comboEliminar2.setModel(modelo);
+            }
         } catch (IOException ex) {
         }
-        
-        
+
+
     }//GEN-LAST:event_EliminarlistMouseClicked
 
     private void AgrgarAl_ta_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgrgarAl_ta_4MouseClicked
         // TODO add your handling code here:
-        File fichero = null;
-        FileReader fr = null;
-        BufferedReader br = null;
-        AreaTexto3.setText("");
-        try {
-            JFileChooser jfc = new JFileChooser("./");
-            FileNameExtensionFilter filtro = new FileNameExtensionFilter("Archivos de Texto", "txt");
-            jfc.setFileFilter(filtro);
-            int seleccion = jfc.showOpenDialog(this);
-            if (seleccion == JFileChooser.APPROVE_OPTION) {
-                fichero = jfc.getSelectedFile();
-                fr = new FileReader(fichero);
-                br = new BufferedReader(fr);
-                String linea;
-                AreaTexto3.setText("");
-                while ((linea = br.readLine()) != null) {
-                    AreaTexto3.append(linea);
-                    AreaTexto3.append("\n");
-                }
-            }
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         try {
-            br.close();
-            fr.close();
-        } catch (IOException ex) {
+            administrarListas ap = new administrarListas("./Listas.txt");
+            DefaultListModel model = new DefaultListModel();
+            ap.cargarArchivo();
+            for (ListaDeClau t : ap.getListalista()) {
+                model.addElement(t);
+            }
+            lista2.setModel(model);
+        } catch (Exception e) {
+
         }
     }//GEN-LAST:event_AgrgarAl_ta_4MouseClicked
 
     private void AgrgarAl_ta_5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgrgarAl_ta_5MouseClicked
         // TODO add your handling code here:
-        File fichero = null;
-        FileReader fr = null;
-        BufferedReader br = null;
-        AreaTexto4.setText("");
         try {
-            JFileChooser jfc = new JFileChooser("./");
-            FileNameExtensionFilter filtro = new FileNameExtensionFilter("Archivos de Texto", "txt");
-            jfc.setFileFilter(filtro);
-            int seleccion = jfc.showOpenDialog(this);
-            if (seleccion == JFileChooser.APPROVE_OPTION) {
-                fichero = jfc.getSelectedFile();
-                fr = new FileReader(fichero);
-                br = new BufferedReader(fr);
-                String linea;
-                AreaTexto4.setText("");
-                while ((linea = br.readLine()) != null) {
-                    AreaTexto4.append(linea);
-                    AreaTexto4.append("\n");
-                }
-            }else{
-                
+            AdministrarProgramas ap = new AdministrarProgramas("./Programas.txt");
+            DefaultListModel model = new DefaultListModel();
+            ap.cargarArchivo();
+            for (Programas t : ap.getListaProgramas()) {
+                model.addElement(t);
             }
-
+            lista1.setModel(model);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        try {
-            br.close();
-            fr.close();
-        } catch (IOException ex) {
-        }
-        
+
     }//GEN-LAST:event_AgrgarAl_ta_5MouseClicked
+
+    private void combo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo1ActionPerformed
+        // TODO add your handling code here:
+
+
+    }//GEN-LAST:event_combo1ActionPerformed
+
+    private void comboEliminar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboEliminar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboEliminar1ActionPerformed
+
+    private void comboEliminar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboEliminar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboEliminar2ActionPerformed
+
+    private void lista3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lista3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lista3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -2152,16 +1909,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JDialog AgregarLista;
     private javax.swing.JButton AgregarP;
     private javax.swing.JDialog AgregarProgramas;
-    private javax.swing.JButton AgrgarAl_ta_1;
-    private javax.swing.JButton AgrgarAl_ta_2;
-    private javax.swing.JButton AgrgarAl_ta_3;
     private javax.swing.JButton AgrgarAl_ta_4;
     private javax.swing.JButton AgrgarAl_ta_5;
-    private javax.swing.JTextArea AreaTexto;
-    private javax.swing.JTextArea AreaTexto1;
-    private javax.swing.JTextArea AreaTexto2;
-    private javax.swing.JTextArea AreaTexto3;
-    private javax.swing.JTextArea AreaTexto4;
     private javax.swing.JFormattedTextField AñoLanzamientoAprograma;
     private javax.swing.JFormattedTextField AñoLanzamientoM;
     private javax.swing.JButton EliminarL;
@@ -2225,27 +1974,25 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton SalidaMenuModificar;
     private javax.swing.JComboBox<String> TipoAPrograma;
     private javax.swing.JComboBox<String> TipoM;
+    private javax.swing.JComboBox<String> combo1;
+    private javax.swing.JComboBox<String> combo2;
+    private javax.swing.JComboBox<String> comboEliminar1;
+    private javax.swing.JComboBox<String> comboEliminar2;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
@@ -2266,19 +2013,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JList<String> lista1;
+    private javax.swing.JList<String> lista2;
+    private javax.swing.JList<String> lista3;
     private javax.swing.JTextField nombreM;
-    private javax.swing.JFormattedTextField posicion;
-    private javax.swing.JFormattedTextField posicionEliminarL;
-    private javax.swing.JFormattedTextField posicionEliminarP;
-    private javax.swing.JFormattedTextField posicionListas;
-    private javax.swing.JTextArea textArea;
-    private javax.swing.JTextArea textArea1;
     // End of variables declaration//GEN-END:variables
 ArrayList programas = new ArrayList();
 }
